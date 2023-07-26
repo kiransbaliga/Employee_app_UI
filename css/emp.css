@@ -1,7 +1,8 @@
 *{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     margin: 0;
     top: 0;
+    font-family:Tahoma, sans-serif
 }
 body{
     width: 100vw;
@@ -17,11 +18,60 @@ aside{
 header{
     position:absolute;
     top: 0;
-    
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     height: 50px;
     width: calc(100vw);
- 
+}
+
+body{
+    background-color: rgba(209, 204, 204, 0.096);
+}
+.blur{
+    box-shadow: 5px 5px 5px rgba(128, 128, 128, 0.185);
+}
+
+.navpane{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    background-color: white;
+}
+
+
+.icon-box{
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 50%;
+    width:35px;
+    height:35px;
+}
+
+.navlink{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 225px;
+    margin-top: 15%;
+    background-color: #034dee7a;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;    
+}
+
+.icon-label{
+    padding-left: 20px;
+    font-size: medium;
+    font-weight: 600;
+    color: white;
+    
+}
+
+.padded{
+    padding:15px;
 }
 
 main{
@@ -29,4 +79,97 @@ main{
     display: flex;
     flex-direction: column;
     justify-content:flex-start
+}
+form{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.Emp{
+    margin-top: 5%;
+}
+.logo{
+    padding-top: 5%;
+    padding-right: 10%;
+}
+.profile{
+    border-radius: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background-color: white;
+}
+
+div>label{
+    color: black;
+    position: relative;
+    left: -10px;
+    top:-5px;
+}
+
+input
+{
+    font-weight: 500;
+    padding-left: 10px;
+    width: 350px;
+    height: 35px;
+}
+
+select{
+    padding-left: 5px;
+    width:360px;
+    height: 40px;
+}
+
+
+.form-item{
+    width: 400px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+header{
+    background-color: white;
+}
+.heading{
+    background-color: white;
+    border-radius: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+
+}
+
+h1{
+    font-weight: 600;
+}
+
+.actions{
+    padding-top: 10px;
+    padding-left: 20px;
+}
+
+.button{
+    padding: 7.5px;
+    width: 150px;
+    border: 0;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.primary{
+    background-color: rgba(11, 82, 233, 0.664);
+    color: white;
+    font-size: 16px;
+    
+}
+
+.secondary{
+    border:1px solid rgba(187, 183, 183, 0.719);
 }

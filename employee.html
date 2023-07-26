@@ -8,15 +8,71 @@
     <link rel="stylesheet" href="./css/emp.css" />
   </head>
   <body>
-      <aside></aside>
+    <aside class="blur navpane">
+      <div class="logo">
+        <img src="./images/kv logo.png" alt="logo keyvalue" width="200px;" />
+      </div>
+      <nav class="navlink icon">
+        <div class="icon-box">
+          <img
+            id="icon"
+            src="./images/icon.svg"
+            alt="accounts icon"
+            width="25px"
+          />
+        </div>
+        <label class="icon-label" for="icon"> Employee List</label>
+      </nav>
+    </aside>
     <main>
-      <header></header>
-      <section>
-        <h1>Create Employee</h1>
-      </section>
-      <section>
-        <form action="">hihi</form>
-      </section>
+      <header class="blur"></header>
+      <div class="padded">
+        <section class="Emp heading blur">
+          <h1>Create Employee</h1>
+        </section>
+        <section class="Emp profile blur">
+          <form action="">
+            <div class="form-item">
+              <label for="input">Employee Name</label>
+              <input type="text" placeholder="Employee Names"/>
+            </div>
+            <div class="form-item">
+              <label for="input">Employee ID</label>
+              <input type="text" placeholder="Employee ID" />
+            </div>
+            <div class="form-item">
+              <label for="input"> Joining Date</label>
+              <input type="text" placeholder="Joining Date"/>
+            </div>
+            <div class="form-item">
+              <label for="input">Role</label>
+              <select name="Role" >
+                <option value="Choose Role"> Choose Role</option>
+              </select>
+            </div>
+            <div class="form-item">
+              <label for="input">Status</label>
+              <select name="Status">
+                <option value="Status"> Status</option>
+              </select>
+            </div>
+            <div class="form-item">
+              <label for="input">Experience</label>
+              <input type="text" placeholder="Experience"/>
+            </div>
+            <div class="form-item">
+              <label for="input">Adress</label>
+              <input type="text" placeholder="Address" />
+            </div>
+          </form>
+
+          <div class="actions">
+            <button class="button primary blur">Create</button>
+            <button class="button secondary blur">Cancel</button>
+          </div>
+
+        </section>
+      </div>
     </main>
     <script src="index.js"></script>
   </body>

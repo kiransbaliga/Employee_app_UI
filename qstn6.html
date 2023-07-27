@@ -1,0 +1,52 @@
+<!-- Design an HTML page with two black square divs 
+    center aligned on the page. On hovering the first square div 
+    change its color using js, and for the second div change its
+     color using css. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+            .sq{
+                width: 300px;
+                height: 300px;
+                
+            }
+            .js{
+                background-color: black;
+            }
+            .css{
+                background-color: black;
+                
+            }
+            .css:hover{
+                background-color: green;
+            }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="sq css"></div>
+        <div id="js" class="sq js"></div>
+    </main>
+    <script>
+        const elem = document.getElementById("js")
+        elem.addEventListener('mouseover',()=>{
+            elem.style.background="yellow";
+        })
+        elem.addEventListener('mouseout',()=>{
+            elem.style.background="black";
+        })
+    </script>
+</body>
+</html>

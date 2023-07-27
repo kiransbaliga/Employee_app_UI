@@ -1,0 +1,28 @@
+
+<!-- Design an HTML page showing the time in a heading 
+    (use Date.now() ), and a button ‘update’ which updates 
+    the time when clicked. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="time">
+        0
+    </div>
+    <button id="btn">update</button>
+    <script>
+        const btn=document.getElementById("btn");
+        const elem = document.getElementById("time");
+        btn.addEventListener('click',()=>{
+            let now=new Date().toLocaleTimeString()
+            elem.innerHTML=now;  
+        })
+    </script>
+</body>
+
+</html>

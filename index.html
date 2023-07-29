@@ -9,7 +9,7 @@
   </head>
   <body>
     <main>
-      <div class="loginpage">
+      <!-- <div class="loginpage">
         <div class="left-hero">
           <div class="box-blue"></div>
           <img class="circle" src="./images/kv-login.jpeg" alt="Login Page" />
@@ -31,7 +31,40 @@
             <p>Press Login Button to go to next page</p>
           </form>
         </div>
-      </div>
+      </div> -->
+      <section>
+        <div class="box-blue">
+          <img
+            src="./images/kv-login.jpeg"
+            alt=" Login Page Image | 2 person staring to computer"
+            class="circle"
+          />
+        </div>
+      </section>
+      <section class="login-form">
+        <div class="logo">
+          <img src="./images/kv logo.png" alt="keyvalue_logo" />
+        </div>
+        <form action="submit()">
+          <div class="text-field">
+            <input type="text" required />
+            <label>Username</label>
+          </div>
+          <div class="text-field">
+            <input type="text" required />
+            <label>Password</label>
+          </div>
+
+          <button
+            type="Submit"
+            onclick="window.location.href='./pages/employee.html';"
+          >
+            Login
+          </button>
+
+          <p>Press Login Button to go to next page</p>
+        </form>
+      </section>
     </main>
     <script src="./js/index.js"></script>
   </body>

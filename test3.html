@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Promise</title>
+  </head>
+  <body>
+    <button id="fetch_data" onclick="fetchdata()">Fetch data</button>
+    <div id="house_list">
+        
+    </div>
+  </body>
+  <script>
+    /**
+     * Refer API Documentation https://anapioficeandfire.com/Documentation
+     * Fetch the details of various houses in the Game of thrones universe
+     *
+     * Challenge 1
+     * Fetch and list down the names of the houses when the user clicks on 'Fetch data' button
+     *
+     * Challenge 2
+     * Improve the result of challenge 1 by grouping the houses based on region
+     * *Hint* use promise chaining
+     */
+    const elem = document.getElementById("house_list");
+
+    function fetchdata() {
+      
+      fetch("https://www.anapioficeandfire.com/api/houses").then(
+        (response) => response.json()).then(
+            (res)=>{
+                len = res.length
+                str=""
+                for (let i=0;i<len;i++){
+                    str+=`<li>${res[i].name}</li>`
+                }
+                elem.innerHTML=str;
+                return res
+            }
+        ).then(
+            (res)=>{
+                let dict={}
+                len = res.length
+                for(let i=0;i<len;i++){
+                    let region = res[i].region;
+                    let name = res[i].name;
+                    if(dict[region]===undefined){
+                        dict[region]=[name]
+                    }
+                    else{
+                        dict[region].push(name)
+                    }
+                }
+                return dict
+            }
+        ).then(
+            (groups)=>{
+                str=""
+                console.log(groups)
+                for(i in groups){
+                    str+=`<h1>${i}</h1>`;
+                    for (j of groups[i]){
+                        str+=`<li>${j}</li>`;
+                       
+                    }
+                }
+                elem.innerHTML=str;
+            }
+        )
+    }
+  </script>
+</html>

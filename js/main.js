@@ -110,5 +110,23 @@ console.log(re.test("in 1992"));
 //Mutation 
 
 
-let intro ='hello "kiran"';
+let intro =`hello "kiran"'`;
 intro
+
+
+
+function incrementByOne(value, callback) {
+	const x = value++;
+callback(x);
+}
+incrementByOne(3, (value) => { console.log(value); });
+
+//Async callback 
+setTimeout(() => console.log(2), 10);
+
+function callAfter5Seconds(callback) {
+    
+  setTimeout(() => callback("Ola amigos"), 5000);
+}
+callAfter5Seconds((data) => { console.log(data); });
+
